@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Areas",
+    "\\Areas\\Administrator",
+    "\\Areas\\Administrator\\Content",
+    "\\Areas\\Administrator\\Controllers",
+    "\\Areas\\Administrator\\Models",
+    "\\Areas\\Administrator\\vendor",
+    "\\Areas\\Administrator\\vendor\\bootstrap",
+    "\\Areas\\Administrator\\vendor\\datatables",
+    "\\Areas\\Administrator\\Views"
+  ],
+  "SelectedNode": "\\Controllers",
+  "PreviewInSolutionExplorer": false
+}

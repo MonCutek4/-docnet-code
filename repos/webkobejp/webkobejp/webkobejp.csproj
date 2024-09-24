@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FE1C6E3-0934-48FE-9394-2FFDA5738889}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webkobejp</RootNamespace>
+    <AssemblyName>webkobejp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44341</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Generated\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\1.png" />
+    <Content Include="img\1234.jpg" />
+    <Content Include="img\3.jpeg" />
+    <Content Include="img\4.jpeg" />
+    <Content Include="img\5451831838191.mp4" />
+    <Content Include="img\9c71e1e25497e7f9399c188e1e4f79f1.jpg" />
+    <Content Include="img\avatar.jpg" />
+    <Content Include="img\baner-1.png" />
+    <Content Include="img\banner-fruits.jpg" />
+    <Content Include="img\best-product-1 - Copy.jpg" />
+    <Content Include="img\best-product-1.jpg" />
+    <Content Include="img\best-product-2.jpg" />
+    <Content Include="img\best-product-3.jpg" />
+    <Content Include="img\best-product-4.jpg" />
+    <Content Include="img\best-product-5.jpg" />
+    <Content Include="img\best-product-6.jpg" />
+    <Content Include="img\c0d1020c5b60c.jpg" />
+    <Content Include="img\ca-mu-3-300x300 - Copy.jpg" />
+    <Content Include="img\ca-mu-3-300x300.jpg" />
+    <Content Include="img\cart-page-header-img.jpg" />
+    <Content Include="img\cua-tasmania-hai-san-tuoi-song-chat-luong_e9ca93bf61b04adf9a04ae6c6ecef21e_grande - Copy - Copy.jpg" />
+    <Content Include="img\cua-tasmania-hai-san-tuoi-song-chat-luong_e9ca93bf61b04adf9a04ae6c6ecef21e_grande.jpg" />
+    <Content Include="img\cua-tasmania-hai-san-tuoi-song-khong-lo_481493a2728d40b9803c6695425303b2_grande.jpg" />
+    <Content Include="img\featur-1.jpg" />
+    <Content Include="img\featur-2.jpg" />
+    <Content Include="img\fruite-item-1.jpg" />
+    <Content Include="img\fruite-item-2.jpg" />
+    <Content Include="img\fruite-item-3.jpg" />
+    <Content Include="img\fruite-item-4.jpg" />
+    <Content Include="img\fruite-item-5.jpg" />
+    <Content Include="img\fruite-item-6.jpg" />
+    <Content Include="img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215-5.jpg" />
+    <Content Include="img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215-6.jpg" />
+    <Content Include="img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215.jpg" />
+    <Content Include="img\gia-hai-san-tuoi-song-hai-san-ua1.jpg" />
+    <Content Include="img\hero-img.jpg" />
+    <Content Include="img\images %281%29.jpeg" />
+    <Content Include="img\images %284%29.jpeg" />
+    <Content Include="img\images %285%29.jpeg" />
+    <Content Include="img\images.jpeg" />
+    <Content Include="img\img\br2.jpeg" />
+    <Content Include="img\img\dưqs.jpeg" />
+    <Content Include="img\img\hero-img.jpg" />
+    <Content Include="img\img\images %2811%29.jpeg" />
+    <Content Include="img\img\images %282%29.jpeg" />
+    <Content Include="img\img\images %286%29.jpeg" />
+    <Content Include="img\img\images %287%29.jpeg" />
+    <Content Include="img\img\images %288%29.jpeg" />
+    <Content Include="img\img\images %289%29.jpeg" />
+    <Content Include="img\img\Screenshot 2024-05-25 143025.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143030.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143034.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143038.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143122.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143132.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143137.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143143.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143147.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143152.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143223.png" />
+    <Content Include="img\img\Screenshot 2024-05-25 143227.png" />
+    <Content Include="img\img\sâda.jpg" />
+    <Content Include="img\img\than-ngoai-kobe-1.jpg" />
+    <Content Include="img\img\thit-bo-kobe-A5-phi-le01 - Copy.jpg" />
+    <Content Include="img\img\thit-bo-kobe-A5-phi-le01.jpg" />
+    <Content Include="img\img\thit-bo-kobe-A5-phi-le02.jpg" />
+    <Content Include="img\img\tải xuống %285%29.jpeg" />
+    <Content Include="img\payment.png" />
+    <Content Include="img\qqe - Copy %283%29.jpeg" />
+    <Content Include="img\shutterstock_1773695441-min.jpg" />
+    <Content Include="img\single-item.jpg" />
+    <Content Include="img\testimonial-1.jpg" />
+    <Content Include="img\vegetable-item-1.jpg" />
+    <Content Include="img\vegetable-item-2.jpg" />
+    <Content Include="img\vegetable-item-3.png" />
+    <Content Include="img\vegetable-item-4.jpg" />
+    <Content Include="img\vegetable-item-5.jpg" />
+    <Content Include="img\vegetable-item-6.jpg" />
+    <Content Include="img\z5451831826445_e967f34960936b8caaabd5ec3fe7a18c.jpg" />
+    <Content Include="img\z5451831830152_60bee97297cb003e79896674f47cadad.jpg" />
+    <Content Include="img\z5451831832114_0646adab96bf59173511ad05d19d642f.jpg" />
+    <Content Include="img\z5451831838313_ab87872c5ca5012f1a0eff577beb3e4d.jpg" />
+    <Content Include="img\z5451831843296_80b861b4e01c3caa0b7527f9ad3bb53d.jpg" />
+    <Content Include="img\z5451831850908_8f32e0320e610f0b077abdeaa360e897.jpg" />
+    <Content Include="img\z5451831851399_dcf93af0d1d2fe0cbd18cb8b284d123e.jpg" />
+    <Content Include="img\z5451831852758_db5cc1ef0395ebbe67bcbdf5db6a888a.jpg" />
+    <Content Include="img\z5451831856072_a11533da46c5550682ab3cf838b71375.jpg" />
+    <Content Include="img\z5451831868039_aa2ca3d2072d65c19ee3263d1a575f6f.jpg" />
+    <Content Include="img\z5454188722808_fef7aab304b5b77dfabc624218db01c0.jpg" />
+    <Content Include="js\main.js" />
+    <Content Include="lib\easing\easing.js" />
+    <Content Include="lib\easing\easing.min.js" />
+    <Content Include="lib\lightbox\css\lightbox.min.css" />
+    <Content Include="lib\lightbox\images\close.png" />
+    <Content Include="lib\lightbox\images\loading.gif" />
+    <Content Include="lib\lightbox\images\next.png" />
+    <Content Include="lib\lightbox\images\prev.png" />
+    <Content Include="lib\lightbox\js\lightbox.min.js" />
+    <Content Include="lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="lib\owlcarousel\owl.carousel.js" />
+    <Content Include="lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="lib\waypoints\links.php" />
+    <Content Include="lib\waypoints\waypoints.min.js" />
+    <Content Include="Models\Generated\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="img\d" />
+    <Content Include="img\h" />
+    <Content Include="img\hg" />
+    <Content Include="img\ư" />
+    <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="wed1.1\404.html" />
+    <Content Include="wed1.1\cart.html" />
+    <Content Include="wed1.1\chackout.html" />
+    <Content Include="wed1.1\contact.html" />
+    <Content Include="wed1.1\css\bootstrap.min.css" />
+    <Content Include="wed1.1\css\style.css" />
+    <Content Include="wed1.1\img\1.png" />
+    <Content Include="wed1.1\img\1234.jpg" />
+    <Content Include="wed1.1\img\3.jpeg" />
+    <Content Include="wed1.1\img\4.jpeg" />
+    <Content Include="wed1.1\img\5451831838191.mp4" />
+    <Content Include="wed1.1\img\9c71e1e25497e7f9399c188e1e4f79f1.jpg" />
+    <Content Include="wed1.1\img\avatar.jpg" />
+    <Content Include="wed1.1\img\baner-1.png" />
+    <Content Include="wed1.1\img\banner-fruits.jpg" />
+    <Content Include="wed1.1\img\best-product-1 - Copy.jpg" />
+    <Content Include="wed1.1\img\best-product-1.jpg" />
+    <Content Include="wed1.1\img\best-product-2.jpg" />
+    <Content Include="wed1.1\img\best-product-3.jpg" />
+    <Content Include="wed1.1\img\best-product-4.jpg" />
+    <Content Include="wed1.1\img\best-product-5.jpg" />
+    <Content Include="wed1.1\img\best-product-6.jpg" />
+    <Content Include="wed1.1\img\c0d1020c5b60c.jpg" />
+    <Content Include="wed1.1\img\ca-mu-3-300x300 - Copy.jpg" />
+    <Content Include="wed1.1\img\ca-mu-3-300x300.jpg" />
+    <Content Include="wed1.1\img\cart-page-header-img.jpg" />
+    <Content Include="wed1.1\img\cua-tasmania-hai-san-tuoi-song-chat-luong_e9ca93bf61b04adf9a04ae6c6ecef21e_grande - Copy - Copy.jpg" />
+    <Content Include="wed1.1\img\cua-tasmania-hai-san-tuoi-song-chat-luong_e9ca93bf61b04adf9a04ae6c6ecef21e_grande.jpg" />
+    <Content Include="wed1.1\img\cua-tasmania-hai-san-tuoi-song-khong-lo_481493a2728d40b9803c6695425303b2_grande.jpg" />
+    <Content Include="wed1.1\img\featur-1.jpg" />
+    <Content Include="wed1.1\img\featur-2.jpg" />
+    <Content Include="wed1.1\img\fruite-item-1.jpg" />
+    <Content Include="wed1.1\img\fruite-item-2.jpg" />
+    <Content Include="wed1.1\img\fruite-item-3.jpg" />
+    <Content Include="wed1.1\img\fruite-item-4.jpg" />
+    <Content Include="wed1.1\img\fruite-item-5.jpg" />
+    <Content Include="wed1.1\img\fruite-item-6.jpg" />
+    <Content Include="wed1.1\img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215-5.jpg" />
+    <Content Include="wed1.1\img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215-6.jpg" />
+    <Content Include="wed1.1\img\gia-hai-san-tuoi-song-hai-san-ua-chuong-nhat-tai-quang-ninh-215.jpg" />
+    <Content Include="wed1.1\img\gia-hai-san-tuoi-song-hai-san-ua1.jpg" />
+    <Content Include="wed1.1\img\hero-img.jpg" />
+    <Content Include="wed1.1\img\images %281%29.jpeg" />
+    <Content Include="wed1.1\img\images %284%29.jpeg" />
+    <Content Include="wed1.1\img\images %285%29.jpeg" />
+    <Content Include="wed1.1\img\images.jpeg" />
+    <Content Include="wed1.1\img\img\br2.jpeg" />
+    <Content Include="wed1.1\img\img\dưqs.jpeg" />
+    <Content Include="wed1.1\img\img\hero-img.jpg" />
+    <Content Include="wed1.1\img\img\images %2811%29.jpeg" />
+    <Content Include="wed1.1\img\img\images %282%29.jpeg" />
+    <Content Include="wed1.1\img\img\images %286%29.jpeg" />
+    <Content Include="wed1.1\img\img\images %287%29.jpeg" />
+    <Content Include="wed1.1\img\img\images %288%29.jpeg" />
+    <Content Include="wed1.1\img\img\images %289%29.jpeg" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143025.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143030.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143034.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143038.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143122.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143132.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143137.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143143.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143147.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143152.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143223.png" />
+    <Content Include="wed1.1\img\img\Screenshot 2024-05-25 143227.png" />
+    <Content Include="wed1.1\img\img\sâda.jpg" />
+    <Content Include="wed1.1\img\img\than-ngoai-kobe-1.jpg" />
+    <Content Include="wed1.1\img\img\thit-bo-kobe-A5-phi-le01 - Copy.jpg" />
+    <Content Include="wed1.1\img\img\thit-bo-kobe-A5-phi-le01.jpg" />
+    <Content Include="wed1.1\img\img\thit-bo-kobe-A5-phi-le02.jpg" />
+    <Content Include="wed1.1\img\img\tải xuống %285%29.jpeg" />
+    <Content Include="wed1.1\img\payment.png" />
+    <Content Include="wed1.1\img\qqe - Copy %283%29.jpeg" />
+    <Content Include="wed1.1\img\shutterstock_1773695441-min.jpg" />
+    <Content Include="wed1.1\img\single-item.jpg" />
+    <Content Include="wed1.1\img\testimonial-1.jpg" />
+    <Content Include="wed1.1\img\vegetable-item-1.jpg" />
+    <Content Include="wed1.1\img\vegetable-item-2.jpg" />
+    <Content Include="wed1.1\img\vegetable-item-3.png" />
+    <Content Include="wed1.1\img\vegetable-item-4.jpg" />
+    <Content Include="wed1.1\img\vegetable-item-5.jpg" />
+    <Content Include="wed1.1\img\vegetable-item-6.jpg" />
+    <Content Include="wed1.1\img\z5451831826445_e967f34960936b8caaabd5ec3fe7a18c.jpg" />
+    <Content Include="wed1.1\img\z5451831830152_60bee97297cb003e79896674f47cadad.jpg" />
+    <Content Include="wed1.1\img\z5451831832114_0646adab96bf59173511ad05d19d642f.jpg" />
+    <Content Include="wed1.1\img\z5451831838313_ab87872c5ca5012f1a0eff577beb3e4d.jpg" />
+    <Content Include="wed1.1\img\z5451831843296_80b861b4e01c3caa0b7527f9ad3bb53d.jpg" />
+    <Content Include="wed1.1\img\z5451831850908_8f32e0320e610f0b077abdeaa360e897.jpg" />
+    <Content Include="wed1.1\img\z5451831851399_dcf93af0d1d2fe0cbd18cb8b284d123e.jpg" />
+    <Content Include="wed1.1\img\z5451831852758_db5cc1ef0395ebbe67bcbdf5db6a888a.jpg" />
+    <Content Include="wed1.1\img\z5451831856072_a11533da46c5550682ab3cf838b71375.jpg" />
+    <Content Include="wed1.1\img\z5451831868039_aa2ca3d2072d65c19ee3263d1a575f6f.jpg" />
+    <Content Include="wed1.1\img\z5454188722808_fef7aab304b5b77dfabc624218db01c0.jpg" />
+    <Content Include="wed1.1\index.html" />
+    <Content Include="wed1.1\js\main.js" />
+    <Content Include="wed1.1\lib\easing\easing.js" />
+    <Content Include="wed1.1\lib\easing\easing.min.js" />
+    <Content Include="wed1.1\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="wed1.1\lib\lightbox\images\close.png" />
+    <Content Include="wed1.1\lib\lightbox\images\loading.gif" />
+    <Content Include="wed1.1\lib\lightbox\images\next.png" />
+    <Content Include="wed1.1\lib\lightbox\images\prev.png" />
+    <Content Include="wed1.1\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="wed1.1\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="wed1.1\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="wed1.1\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="wed1.1\lib\waypoints\links.php" />
+    <Content Include="wed1.1\lib\waypoints\waypoints.min.js" />
+    <Content Include="wed1.1\shop-detail.html" />
+    <Content Include="wed1.1\shop.html" />
+    <Content Include="wed1.1\testimonial.html" />
+    <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="scss\bootstrap\scss\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\_badge.scss" />
+    <Content Include="scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\_card.scss" />
+    <Content Include="scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="scss\bootstrap\scss\_close.scss" />
+    <Content Include="scss\bootstrap\scss\_containers.scss" />
+    <Content Include="scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="scss\bootstrap\scss\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\_functions.scss" />
+    <Content Include="scss\bootstrap\scss\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="scss\bootstrap\scss\_images.scss" />
+    <Content Include="scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="scss\bootstrap\scss\_modal.scss" />
+    <Content Include="scss\bootstrap\scss\_nav.scss" />
+    <Content Include="scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\_popover.scss" />
+    <Content Include="scss\bootstrap\scss\_progress.scss" />
+    <Content Include="scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="scss\bootstrap\scss\_root.scss" />
+    <Content Include="scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="scss\bootstrap\scss\_tables.scss" />
+    <Content Include="scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="scss\bootstrap\scss\_type.scss" />
+    <Content Include="scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\_variables.scss" />
+    <Content Include="wed1.1\img\d" />
+    <Content Include="wed1.1\img\h" />
+    <Content Include="wed1.1\img\hg" />
+    <Content Include="wed1.1\img\ư" />
+    <Content Include="wed1.1\lib\owlcarousel\LICENSE" />
+    <Content Include="wed1.1\scss\bootstrap.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_card.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_close.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_images.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_root.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_type.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="wed1.1\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Views\Home\Shop.cshtml" />
+    <Content Include="Views\Home\shopdetail.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\cart.cshtml" />
+    <Content Include="Views\Home\chackout.cshtml" />
+    <Content Include="Views\Home\testimonial.cshtml" />
+    <Content Include="Views\_LayoutPage1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49812</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44341/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
